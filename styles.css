@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.about-section{
+    text-align: center;
+    margin: 2rem;
+}
+
+.about-header{
+    color: var(--very-dark-magenta);
+    font-size: 40px;
+    margin-bottom:2rem;
+    text-shadow:1px 0 0 currentColor;
+}
+
+.about-txt{
+   line-height: 1.5rem;
+   opacity: 70%;
+}
+
+.rates-section > div{
+   width: 85vw;
+   text-align: center;
+   background-color: var(--light-grayish-magenta);
+   padding: 1rem;
+   margin-bottom: 1rem;
+   border-radius: 10px;
+}
+
+.rates-section > div > p {
+    color: var(--very-dark-magenta);
+    text-shadow:1px 0 0 currentColor;
+}
+
+.stars{
+    padding-bottom: 1rem;
+}
+
+.customers > div {
+    background-color: var(--very-dark-magenta);
+    margin: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.customer-header{
+    margin-top: 0.7rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.customer-header > img {
+    border-radius: 100%;
+    width: 50px;
+}
+
+.customer-name-container{
+    align-self: center;
+    margin-left: 1.5rem;
+}
+
+.customer-name{
+    color: var(--white);
+    margin-bottom: 0.3rem;
+    font-weight: 900;
+}
+
+.customer-name-container:last-child{
+    color: var(--soft-pink);
+    font-weight: 300;
+}
+
+.customer-feedback{
+    color: var(--white);
+    font-weight: 300;
+    opacity: 90%;
+    line-height: 1.5rem;
+}
+
+@media screen and (min-width: 1100px){
+    header{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 100vh;
+        transform: scale(0.9);
+    }
+
+    .about-section{
+        text-align: left;
+    }
+
+    .about-header{
+        width: 350px;
+    }
+
+    .about-txt{
+        margin-top: -1rem;
+        width: 450px;
+    }
+    
+    .rates-section > div {
+        width: 35vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .stars{
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .about-section{
+        margin-right: 10rem;
+    }
+
+    .rates-section > div:nth-of-type(2){
+       margin-left: 2.2rem;
+    }
+
+    .rates-section > div:nth-of-type(3){
+        margin-left: 4.4rem;
+    }
+
+    .customers {
+        display: flex;
+    
+        margin-top: -2.2rem ;
+    }
+
+    .customers > div {
+        margin-top: 0;
+    }
+    
+    .customers > div:nth-of-type(2){
+        transform: translateY(1rem);
+    }
+
+    .customers > div:nth-of-type(3){
+        transform: translateY(2rem);
+    }
+}
